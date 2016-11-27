@@ -6,3 +6,5 @@ intermediate/
 *.pdb
 *.exe
 bin/engine_data/
+*.iobj
+*.ipdb

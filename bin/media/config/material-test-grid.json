@@ -1,13 +1,10 @@
 {
-	"model-name" : "media/material-test-grid.obj",
-
-	"env-map" : "media/background.hdr",
+	"model-name" : "media/models/material-test-grid.obj",
+	"env-map" : "media/textures/background.hdr",
 	"env-color" : [1.0, 1.0, 1.0, 0.0],
     "env-type" : "uniform",
     "light-direction" : [0.0, 1.0, 0.0, 0.0],
-
 	"integrator" : "path-trace",
-
 	"camera-fov" : 35.0,
 	"camera-distance" : 200.0,
 	"camera-phi" : 270.0,
@@ -16,7 +13,6 @@
 	"camera-view-point" : [0.0, 5.0, 0.0],
 	"aperture-size" : 1.0,
 	"focal-distance-correction" : 1.0,
-
 	"kd-tree-max-depth" : 31,
 	"render-kd-tree" : 0
 }

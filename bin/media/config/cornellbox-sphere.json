@@ -1,6 +1,6 @@
 {
-	"model-name" : "media/cornellbox-Sphere.obj",
-	"env-map" : "media/background.hdr.no",
+	"model-name" : "media/models/cornellbox-Sphere.obj",
+	"env-map" : "media/textures/background.hdr.no",
 	"env-color" : [0.0, 0.0, 0.0, 0.0],
     "env-type" : "uniform",
     "light-direction" : [0.0, 1.0, 0.0, 0.0],

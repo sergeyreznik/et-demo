@@ -4,7 +4,7 @@
 	"method" : "backward",
 	"sampler" : "stratified",
 	"reconstruction" : "triangle",
-	"render-region-size" : 16,
+	"render-region-size" : 32,
 	"threads" : 0,
 	"max-path-length" : 0
 }

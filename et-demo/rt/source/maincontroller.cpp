@@ -37,17 +37,7 @@ void MainController::applicationDidLoad(et::RenderContext* rc)
 
 	et::ObjectsCache localCache;
 
-#if (ET_PLATFORM_WIN)
-	et::application().pushSearchPath("..");
-	et::application().pushSearchPath("..\\..");
-	et::application().pushSearchPath("..\\..\\..");
-	et::application().pushSearchPath("..\\..\\..\\..");
-	et::application().pushSearchPath("Q:\\SDK\\Textures");
-#elif (ET_PLATFORM_MAC)
-	et::application().pushSearchPath("/Volumes/Development/SDK/Textures");
-#endif
-
-	auto configName = et::application().resolveFileName("config/config.json");
+	auto configName = et::application().resolveFileName("media/config/config.json");
 	et::VariantClass vc = et::VariantClass::Invalid;
 	_options = et::json::deserialize(et::loadTextFile(configName), vc);
 	ET_ASSERT(vc == et::VariantClass::Dictionary);
@@ -55,7 +45,7 @@ void MainController::applicationDidLoad(et::RenderContext* rc)
 	if (_options.hasKey("reference"))
 	{
 		vc = et::VariantClass::Invalid;
-		configName = et::application().resolveFileName("config/" + _options.stringForKey("reference")->content);
+		configName = et::application().resolveFileName("media/config/" + _options.stringForKey("reference")->content);
 		et::Dictionary reference = et::json::deserialize(et::loadTextFile(configName), vc);
 		ET_ASSERT(vc == et::VariantClass::Dictionary);
 
@@ -194,7 +184,9 @@ void MainController::start()
 	desc->data = et::BinaryDataStorage(reinterpret_cast<unsigned char*>(_textureData.data()), _textureData.dataSize());
 	_texture = _rc->renderer()->createTexture(desc);
 
-	_mainPass = _rc->renderer()->allocateRenderPass(et::RenderPass::ConstructionInfo());
+	et::RenderPass::ConstructionInfo passInfo;
+	passInfo.color[0].enabled = true;
+	_mainPass = _rc->renderer()->allocateRenderPass(passInfo);
 	_fullscreenQuad = et::renderhelper::createFullscreenRenderBatch(_texture);
 
 	const et::vec3 lookPoint = arrayToVec3(_options.arrayForKey("camera-view-point"));

@@ -1,6 +1,6 @@
 {
-	"model-name" : "media/sponza/sponza.obj",
-	"env-map" : "media/background.hdroff",
+	"model-name" : "media/models/sponza/sponza.obj",
+	"env-map" : "media/textures/background.hdroff",
 	"env-color" : [10.0, 10.0, 10.0, 1.0],
 	"env-type" : "uniform",
 	"light-direction" : [0.0, 1.0, 0.0, 0.0],

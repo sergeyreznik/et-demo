@@ -1,8 +1,8 @@
 {
-	"model-name" : "media/dragon_stand.obj",
-	"env-map" : "media/background.hdr",
+	"model-name" : "media/models/dragon_stand.obj",
+	"env-map" : "media/textures/background.hdr",
 	"env-color" : [1.0, 1.0, 1.0, 1.0],
-    	"env-type" : "uniform",
+    "env-type" : "uniform",
 	"light-direction" : [0.0, 1.0, 0.0, 0.0],
 	"integrator" : "path-trace",
 	"camera-fov" : 30.0,

@@ -24,16 +24,9 @@ void demo::MainController::setRenderContextParameters(et::RenderContextParameter
 
 void demo::MainController::applicationDidLoad(et::RenderContext* rc)
 {
-#if (ET_PLATFORM_WIN)
-	et::application().pushSearchPath("..");
-	et::application().pushSearchPath("..\\..");
-	et::application().pushSearchPath("..\\..\\..");
-	et::application().pushSearchPath("..\\..\\..\\..");
-#endif
-
 	_loader.init(rc);
 
-	auto configName = et::application().resolveFileName("config/config.json");
+	auto configName = et::application().resolveFileName("media/config/config.json");
 	et::VariantClass vc = et::VariantClass::Invalid;
 	_options = et::json::deserialize(et::loadTextFile(configName), vc);
 	ET_ASSERT(vc == et::VariantClass::Dictionary);
@@ -41,7 +34,7 @@ void demo::MainController::applicationDidLoad(et::RenderContext* rc)
 	if (_options.hasKey("reference"))
 	{
 		vc = et::VariantClass::Invalid;
-		configName = et::application().resolveFileName("config/" + _options.stringForKey("reference")->content);
+		configName = et::application().resolveFileName("media/config/" + _options.stringForKey("reference")->content);
 		et::Dictionary reference = et::json::deserialize(et::loadTextFile(configName), vc);
 		ET_ASSERT(vc == et::VariantClass::Dictionary);
 

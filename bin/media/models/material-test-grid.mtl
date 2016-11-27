@@ -7,8 +7,8 @@ newmtl Plane
 	Ni 0.0
 	Kd 1.0 1.0 1.0
 	Ks 1.0 1.0 1.0
-	map_bump textures/checkers_normal.png
-	map_Kd textures/white.png
+	map_bump media/textures/normal_2.png
+	map_Kd media/textures/white.png
 
 newmtl Sphere01
 	Pr 0.05
@@ -16,8 +16,8 @@ newmtl Sphere01
 	Ni 0.0
 	Kd 1.0 1.0 1.0
 	Ks 1.0 1.0 1.0
-	map_bump textures/checkers_normal.png
-	map_Kd textures/white.png
+	map_bump media/textures/normal_1.png
+	map_Kd media/textures/white.png
 
 newmtl Sphere02
 	Pr 0.15
@@ -25,8 +25,8 @@ newmtl Sphere02
 	Ni 0.0
 	Kd 1.0 1.0 1.0
 	Ks 1.0 1.0 1.0
-	map_bump textures/checkers_normal.png
-	map_Kd textures/white.png
+	map_bump media/textures/normal_1.png
+	map_Kd media/textures/white.png
 
 newmtl Sphere03
 	Pr 0.3
@@ -34,8 +34,8 @@ newmtl Sphere03
 	Ni 0.0
 	Kd 1.0 1.0 1.0
 	Ks 1.0 1.0 1.0
-	map_bump textures/checkers_normal.png
-	map_Kd textures/white.png
+	map_bump media/textures/normal_1.png
+	map_Kd media/textures/white.png
 
 newmtl Sphere04
 	Pr 0.45
@@ -43,8 +43,8 @@ newmtl Sphere04
 	Ni 0.0
 	Kd 1.0 1.0 1.0
 	Ks 1.0 1.0 1.0
-	map_bump textures/checkers_normal.png
-	map_Kd textures/white.png
+	map_bump media/textures/normal_1.png
+	map_Kd media/textures/white.png
 
 newmtl Sphere05
 	Pr 0.6
@@ -52,8 +52,8 @@ newmtl Sphere05
 	Ni 0.0
 	Kd 1.0 1.0 1.0
 	Ks 1.0 1.0 1.0
-	map_bump textures/checkers_normal.png
-	map_Kd textures/white.png
+	map_bump media/textures/normal_1.png
+	map_Kd media/textures/white.png
 
 newmtl Sphere06
 	Pr 0.05
@@ -61,8 +61,8 @@ newmtl Sphere06
 	Ni 0.0
 	Kd 1.0 1.0 1.0
 	Ks 1.0 1.0 1.0
-	map_bump textures/checkers_normal.png
-	map_Kd textures/white.png
+	map_bump media/textures/normal_1.png
+	map_Kd media/textures/white.png
 
 # 0.1 0.325 0.55 0.775 1.0
 newmtl Sphere07
@@ -71,8 +71,8 @@ newmtl Sphere07
 	Ni 0.0
 	Kd 1.0 1.0 1.0
 	Ks 1.0 1.0 1.0
-	map_bump textures/checkers_normal.png
-	map_Kd textures/white.png
+	map_bump media/textures/normal_1.png
+	map_Kd media/textures/white.png
 
 newmtl Sphere08
 	Pr 0.3
@@ -80,8 +80,8 @@ newmtl Sphere08
 	Ni 0.0
 	Kd 1.0 1.0 1.0
 	Ks 1.0 1.0 1.0
-	map_bump textures/checkers_normal.png
-	map_Kd textures/white.png
+	map_bump media/textures/normal_1.png
+	map_Kd media/textures/white.png
 
 newmtl Sphere09
 	Pr 0.45
@@ -89,8 +89,8 @@ newmtl Sphere09
 	Ni 0.0
 	Kd 1.0 1.0 1.0
 	Ks 1.0 1.0 1.0
-	map_bump textures/checkers_normal.png
-	map_Kd textures/white.png
+	map_bump media/textures/normal_1.png
+	map_Kd media/textures/white.png
 
 newmtl Sphere10
 	Pr 0.6
@@ -98,8 +98,8 @@ newmtl Sphere10
 	Ni 0.0
 	Kd 1.0 1.0 1.0
 	Ks 1.0 1.0 1.0
-	map_bump textures/checkers_normal.png
-	map_Kd textures/white.png
+	map_bump media/textures/normal_1.png
+	map_Kd media/textures/white.png
 
 newmtl Sphere11
 	Pr 0.05
@@ -107,8 +107,8 @@ newmtl Sphere11
 	Ni 0.0
 	Kd 1.0 1.0 1.0
 	Ks 1.0 1.0 1.0
-	map_bump textures/checkers_normal.png
-	map_Kd textures/white.png
+	map_bump media/textures/normal_1.png
+	map_Kd media/textures/white.png
 
 newmtl Sphere12
 	Pr 0.15
@@ -116,8 +116,8 @@ newmtl Sphere12
 	Ni 0.0
 	Kd 1.0 1.0 1.0
 	Ks 1.0 1.0 1.0
-	map_bump textures/checkers_normal.png
-	map_Kd textures/white.png
+	map_bump media/textures/normal_1.png
+	map_Kd media/textures/white.png
 
 newmtl Sphere13
 	Pr 0.3
@@ -125,8 +125,8 @@ newmtl Sphere13
 	Ni 0.0
 	Kd 1.0 1.0 1.0
 	Ks 1.0 1.0 1.0
-	map_bump textures/checkers_normal.png
-	map_Kd textures/white.png
+	map_bump media/textures/normal_1.png
+	map_Kd media/textures/white.png
 
 newmtl Sphere14
 	Pr 0.45
@@ -134,8 +134,8 @@ newmtl Sphere14
 	Ni 0.0
 	Kd 1.0 1.0 1.0
 	Ks 1.0 1.0 1.0
-	map_bump textures/checkers_normal.png
-	map_Kd textures/white.png
+	map_bump media/textures/normal_1.png
+	map_Kd media/textures/white.png
 
 newmtl Sphere15
 	Pr 0.6
@@ -143,8 +143,8 @@ newmtl Sphere15
 	Ni 0.0
 	Kd 1.0 1.0 1.0
 	Ks 1.0 1.0 1.0
-	map_bump textures/checkers_normal.png
-	map_Kd textures/white.png
+	map_bump media/textures/normal_1.png
+	map_Kd media/textures/white.png
 
 newmtl Sphere16
 	Pr 0.05
@@ -152,8 +152,8 @@ newmtl Sphere16
 	Ni 0.0
 	Kd 1.0 1.0 1.0
 	Ks 1.0 1.0 1.0
-	map_bump textures/checkers_normal.png
-	map_Kd textures/white.png
+	map_bump media/textures/normal_1.png
+	map_Kd media/textures/white.png
 
 newmtl Sphere17
 	Pr 0.15
@@ -161,8 +161,8 @@ newmtl Sphere17
 	Ni 0.0
 	Kd 1.0 1.0 1.0
 	Ks 1.0 1.0 1.0
-	map_bump textures/checkers_normal.png
-	map_Kd textures/white.png
+	map_bump media/textures/normal_1.png
+	map_Kd media/textures/white.png
 
 newmtl Sphere18
 	Pr 0.3
@@ -170,8 +170,8 @@ newmtl Sphere18
 	Ni 0.0
 	Kd 1.0 1.0 1.0
 	Ks 1.0 1.0 1.0
-	map_bump textures/checkers_normal.png
-	map_Kd textures/white.png
+	map_bump media/textures/normal_1.png
+	map_Kd media/textures/white.png
 
 newmtl Sphere19
 	Pr 0.45
@@ -179,8 +179,8 @@ newmtl Sphere19
 	Ni 0.0
 	Kd 1.0 1.0 1.0
 	Ks 1.0 1.0 1.0
-	map_bump textures/checkers_normal.png
-	map_Kd textures/white.png
+	map_bump media/textures/normal_1.png
+	map_Kd media/textures/white.png
 
 newmtl Sphere20
 	Pr 0.6
@@ -188,8 +188,8 @@ newmtl Sphere20
 	Ni 0.0
 	Kd 1.0 1.0 1.0
 	Ks 1.0 1.0 1.0
-	map_bump textures/checkers_normal.png
-	map_Kd textures/white.png
+	map_bump media/textures/normal_1.png
+	map_Kd media/textures/white.png
 
 newmtl Sphere21
 	Pr 0.05
@@ -197,8 +197,8 @@ newmtl Sphere21
 	Ni 0.0
 	Kd 1.0 1.0 1.0
 	Ks 1.0 1.0 1.0
-	map_bump textures/checkers_normal.png
-	map_Kd textures/white.png
+	map_bump media/textures/normal_1.png
+	map_Kd media/textures/white.png
 
 newmtl Sphere22
 	Pr 0.15
@@ -206,8 +206,8 @@ newmtl Sphere22
 	Ni 0.0
 	Kd 1.0 1.0 1.0
 	Ks 1.0 1.0 1.0
-	map_bump textures/checkers_normal.png
-	map_Kd textures/white.png
+	map_bump media/textures/normal_1.png
+	map_Kd media/textures/white.png
 
 newmtl Sphere23
 	Pr 0.3
@@ -215,8 +215,8 @@ newmtl Sphere23
 	Ni 0.0
 	Kd 1.0 1.0 1.0
 	Ks 1.0 1.0 1.0
-	map_bump textures/checkers_normal.png
-	map_Kd textures/white.png
+	map_bump media/textures/normal_1.png
+	map_Kd media/textures/white.png
 
 newmtl Sphere24
 	Pr 0.45
@@ -224,8 +224,8 @@ newmtl Sphere24
 	Ni 0.0
 	Kd 1.0 1.0 1.0
 	Ks 1.0 1.0 1.0
-	map_bump textures/checkers_normal.png
-	map_Kd textures/white.png
+	map_bump media/textures/normal_1.png
+	map_Kd media/textures/white.png
 
 newmtl Sphere25
 	Pr 0.6
@@ -233,5 +233,5 @@ newmtl Sphere25
 	Ni 0.0
 	Kd 1.0 1.0 1.0
 	Ks 1.0 1.0 1.0
-	map_bump textures/checkers_normal.png
-	map_Kd textures/white.png
+	map_bump media/textures/normal_1.png
+	map_Kd media/textures/white.png

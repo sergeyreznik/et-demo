@@ -1,6 +1,6 @@
 {
-	"model-name" : "media/cornellbox-water.obj",
-	"env-map" : "media/background.hdr.no",
+	"model-name" : "media/models/cornellbox-water.obj",
+	"env-map" : "media/textures/background.hdroff",
 	"env-color" : [0.0, 0.0, 0.0, 1.0],
     "env-type" : "uniform",
     "light-direction" : [0.0, 1.0, 0.0, 0.0],
