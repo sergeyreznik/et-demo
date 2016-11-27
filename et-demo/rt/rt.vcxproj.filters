@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="et-ext">
+      <UniqueIdentifier>{5b7bf312-0561-449e-ab69-da329bcd0c40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="et-ext\rt">
+      <UniqueIdentifier>{d068bb12-2e55-4949-a560-f5a00bd9e93a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\maincontroller.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\et\include\et-ext\rt\rt.pack.cxx">
+      <Filter>et-ext\rt</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\maincontroller.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\et\include\et-ext\rt\bsdf.h">
+      <Filter>et-ext\rt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\et\include\et-ext\rt\environment.h">
+      <Filter>et-ext\rt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\et\include\et-ext\rt\integrator.h">
+      <Filter>et-ext\rt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\et\include\et-ext\rt\kdtree.h">
+      <Filter>et-ext\rt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\et\include\et-ext\rt\raytrace.h">
+      <Filter>et-ext\rt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\et\include\et-ext\rt\raytraceobjects.h">
+      <Filter>et-ext\rt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\et\include\et-ext\rt\reconstruction.h">
+      <Filter>et-ext\rt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\et\include\et-ext\rt\sampler.h">
+      <Filter>et-ext\rt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\et\include\et-ext\rt\bsdf.cpp">
+      <Filter>et-ext\rt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\et\include\et-ext\rt\environment.cpp">
+      <Filter>et-ext\rt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\et\include\et-ext\rt\integrator.cpp">
+      <Filter>et-ext\rt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\et\include\et-ext\rt\kdtree.cpp">
+      <Filter>et-ext\rt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\et\include\et-ext\rt\raytrace.cpp">
+      <Filter>et-ext\rt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\et\include\et-ext\rt\raytraceobjects.cpp">
+      <Filter>et-ext\rt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\et\include\et-ext\rt\reconstruction.cpp">
+      <Filter>et-ext\rt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\et-ext\rt\reconstruction.cpp">
+      <Filter>et-ext\rt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\et\include\et-ext\rt\sampler.cpp">
+      <Filter>et-ext\rt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\et-ext\rt\sampler.cpp">
+      <Filter>et-ext\rt</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

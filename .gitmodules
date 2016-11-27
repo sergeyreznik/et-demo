@@ -1,0 +1,3 @@
+[submodule "external/et"]
+	path = external/et
+	url = https://github.com/sergeyreznik/et-engine.git
