@@ -8,7 +8,7 @@
 void demo::MainController::setApplicationParameters(et::ApplicationParameters& params)
 {
 #if (ET_PLATFORM_WIN)
-	params.renderingAPI = et::RenderingAPI::Vulkan;
+	params.renderingAPI = et::RenderingAPI::DirectX12;
 #elif (ET_PLATFORM_MAC)
 	params.renderingAPI = et::RenderingAPI::Metal;
 #endif

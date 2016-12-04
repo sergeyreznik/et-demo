@@ -3,7 +3,7 @@
 #include <et/rendering/base/primitives.h>
 
 #if (ET_PLATFORM_WIN)
-const et::RenderingAPI api = et::RenderingAPI::Vulkan;
+const et::RenderingAPI api = et::RenderingAPI::DirectX12;
 #else
 const et::RenderingAPI api = et::RenderingAPI::Metal;
 #endif
