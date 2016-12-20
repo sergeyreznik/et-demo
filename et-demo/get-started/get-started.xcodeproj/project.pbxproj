@@ -7,42 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5C3C50181C9EA09300C5B47A /* libet-static-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C3C50171C9EA08900C5B47A /* libet-static-mac.a */; };
-		5C4515491D7DE5AE00D093EB /* engine_data in Resources */ = {isa = PBXBuildFile; fileRef = 5C4515481D7DE5AE00D093EB /* engine_data */; };
-		5C484B9F1D3D700800E02180 /* media in Resources */ = {isa = PBXBuildFile; fileRef = 5C484B9E1D3D700800E02180 /* media */; };
 		5C8E1A0E1D44DC4100E2682B /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C8E1A0D1D44DC4000E2682B /* Metal.framework */; };
 		5C8E1A131D44DC5E00E2682B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C8E1A121D44DC5E00E2682B /* QuartzCore.framework */; };
+		5CCB9D001E09D82D009FD413 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5CCB9CFD1E09D82D009FD413 /* main.cpp */; };
+		5CCB9D011E09D82D009FD413 /* MainController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5CCB9CFE1E09D82D009FD413 /* MainController.cpp */; };
+		5CCB9D1B1E09DBFB009FD413 /* libet-static-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCB9D1A1E09DBFB009FD413 /* libet-static-mac.a */; };
+		5CCB9D211E09DD65009FD413 /* engine_data in Resources */ = {isa = PBXBuildFile; fileRef = 5CCB9D201E09DD65009FD413 /* engine_data */; };
 		6EBB83BA1CD25D1700552C1E /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EBB83B91CD25D1700552C1E /* libz.tbd */; };
-		A5A21CD01A6547C1004AD95C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5A21CCD1A6547C1004AD95C /* main.cpp */; };
-		A5A21CD11A6547C1004AD95C /* MainController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5A21CCE1A6547C1004AD95C /* MainController.cpp */; };
 		A5A21E251A654892004AD95C /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A21E241A654892004AD95C /* OpenGL.framework */; };
 		A5A21E271A654895004AD95C /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A21E261A654895004AD95C /* AppKit.framework */; };
 		A5A21E291A654899004AD95C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A21E281A654898004AD95C /* CoreGraphics.framework */; };
 		A5A21E2B1A6548A2004AD95C /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A21E2A1A6548A2004AD95C /* CoreVideo.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		5C3C50161C9EA08900C5B47A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5C3C50121C9EA08900C5B47A /* et-static-mac.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 6EBE15B11C66B4AD00AF7206;
-			remoteInfo = "et-static-mac";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		5C3C50121C9EA08900C5B47A /* et-static-mac.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "et-static-mac.xcodeproj"; path = "../../../projects/et-static-mac.xcodeproj"; sourceTree = "<group>"; };
-		5C4515481D7DE5AE00D093EB /* engine_data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = engine_data; path = ../../../engine_data; sourceTree = "<group>"; };
-		5C484B9E1D3D700800E02180 /* media */ = {isa = PBXFileReference; lastKnownFileType = folder; name = media; path = ../../media; sourceTree = "<group>"; };
 		5C8E1A0D1D44DC4000E2682B /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		5C8E1A121D44DC5E00E2682B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		6EBB83B81CD25CEB00552C1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CCB9CFD1E09D82D009FD413 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		5CCB9CFE1E09D82D009FD413 /* MainController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MainController.cpp; sourceTree = "<group>"; };
+		5CCB9CFF1E09D82D009FD413 /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
+		5CCB9D051E09D9CC009FD413 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
+		5CCB9D1A1E09DBFB009FD413 /* libet-static-mac.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libet-static-mac.a"; path = "../../../_DerivedData/et-demo-fyswrpxpaanexjaaapqmxwjvxsfi/Build/Products/Debug/libet-static-mac.a"; sourceTree = "<group>"; };
+		5CCB9D201E09DD65009FD413 /* engine_data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = engine_data; path = ../../external/et/engine_data; sourceTree = "<group>"; };
 		6EBB83B91CD25D1700552C1E /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		A5A21CA91A65477B004AD95C /* get-started-osx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "get-started-osx.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A5A21CCD1A6547C1004AD95C /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../source/main.cpp; sourceTree = "<group>"; };
-		A5A21CCE1A6547C1004AD95C /* MainController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MainController.cpp; path = ../source/MainController.cpp; sourceTree = "<group>"; };
-		A5A21CCF1A6547C1004AD95C /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainController.h; path = ../source/MainController.h; sourceTree = "<group>"; };
+		A5A21CA91A65477B004AD95C /* get-started.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "get-started.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5A21E241A654892004AD95C /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		A5A21E261A654895004AD95C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		A5A21E281A654898004AD95C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -54,8 +42,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CCB9D1B1E09DBFB009FD413 /* libet-static-mac.a in Frameworks */,
 				6EBB83BA1CD25D1700552C1E /* libz.tbd in Frameworks */,
-				5C3C50181C9EA09300C5B47A /* libet-static-mac.a in Frameworks */,
 				A5A21E2B1A6548A2004AD95C /* CoreVideo.framework in Frameworks */,
 				A5A21E291A654899004AD95C /* CoreGraphics.framework in Frameworks */,
 				A5A21E271A654895004AD95C /* AppKit.framework in Frameworks */,
@@ -68,37 +56,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5C3C50131C9EA08900C5B47A /* Products */ = {
+		5CCB9CFC1E09D82D009FD413 /* source */ = {
 			isa = PBXGroup;
 			children = (
-				5C3C50171C9EA08900C5B47A /* libet-static-mac.a */,
+				5CCB9CFD1E09D82D009FD413 /* main.cpp */,
+				5CCB9CFE1E09D82D009FD413 /* MainController.cpp */,
+				5CCB9CFF1E09D82D009FD413 /* MainController.h */,
 			);
-			name = Products;
+			path = source;
 			sourceTree = "<group>";
 		};
-		A5A21CA01A65477B004AD95C = {
+		5CCB9D191E09DBFB009FD413 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5C4515481D7DE5AE00D093EB /* engine_data */,
-				5C484B9E1D3D700800E02180 /* media */,
-				5C3C50121C9EA08900C5B47A /* et-static-mac.xcodeproj */,
-				A5A21CCC1A6547B9004AD95C /* Source */,
-				A5A21CAC1A65477B004AD95C /* Supporting Files */,
-				A5A21CAA1A65477B004AD95C /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		A5A21CAA1A65477B004AD95C /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				A5A21CA91A65477B004AD95C /* get-started-osx.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		A5A21CAC1A65477B004AD95C /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
+				5CCB9D051E09D9CC009FD413 /* Info.plist */,
 				6EBB83B91CD25D1700552C1E /* libz.tbd */,
 				5C8E1A121D44DC5E00E2682B /* QuartzCore.framework */,
 				5C8E1A0D1D44DC4000E2682B /* Metal.framework */,
@@ -106,28 +77,35 @@
 				A5A21E281A654898004AD95C /* CoreGraphics.framework */,
 				A5A21E261A654895004AD95C /* AppKit.framework */,
 				A5A21E241A654892004AD95C /* OpenGL.framework */,
+				5CCB9D1A1E09DBFB009FD413 /* libet-static-mac.a */,
 			);
 			name = "Supporting Files";
-			path = GetStarted;
 			sourceTree = "<group>";
 		};
-		A5A21CCC1A6547B9004AD95C /* Source */ = {
+		A5A21CA01A65477B004AD95C = {
 			isa = PBXGroup;
 			children = (
-				A5A21CCD1A6547C1004AD95C /* main.cpp */,
-				A5A21CCE1A6547C1004AD95C /* MainController.cpp */,
-				A5A21CCF1A6547C1004AD95C /* MainController.h */,
-				6EBB83B81CD25CEB00552C1E /* Info.plist */,
+				5CCB9D201E09DD65009FD413 /* engine_data */,
+				5CCB9CFC1E09D82D009FD413 /* source */,
+				A5A21CAA1A65477B004AD95C /* Products */,
+				5CCB9D191E09DBFB009FD413 /* Supporting Files */,
 			);
-			name = Source;
+			sourceTree = "<group>";
+		};
+		A5A21CAA1A65477B004AD95C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A5A21CA91A65477B004AD95C /* get-started.app */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A5A21CA81A65477B004AD95C /* get-started-osx */ = {
+		A5A21CA81A65477B004AD95C /* get-started */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A5A21CC61A65477B004AD95C /* Build configuration list for PBXNativeTarget "get-started-osx" */;
+			buildConfigurationList = A5A21CC61A65477B004AD95C /* Build configuration list for PBXNativeTarget "get-started" */;
 			buildPhases = (
 				A5A21CA51A65477B004AD95C /* Sources */,
 				A5A21CA61A65477B004AD95C /* Frameworks */,
@@ -137,9 +115,9 @@
 			);
 			dependencies = (
 			);
-			name = "get-started-osx";
+			name = "get-started";
 			productName = GetStarted;
-			productReference = A5A21CA91A65477B004AD95C /* get-started-osx.app */;
+			productReference = A5A21CA91A65477B004AD95C /* get-started.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -167,36 +145,19 @@
 			mainGroup = A5A21CA01A65477B004AD95C;
 			productRefGroup = A5A21CAA1A65477B004AD95C /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 5C3C50131C9EA08900C5B47A /* Products */;
-					ProjectRef = 5C3C50121C9EA08900C5B47A /* et-static-mac.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
-				A5A21CA81A65477B004AD95C /* get-started-osx */,
+				A5A21CA81A65477B004AD95C /* get-started */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		5C3C50171C9EA08900C5B47A /* libet-static-mac.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libet-static-mac.a";
-			remoteRef = 5C3C50161C9EA08900C5B47A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A5A21CA71A65477B004AD95C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C4515491D7DE5AE00D093EB /* engine_data in Resources */,
-				5C484B9F1D3D700800E02180 /* media in Resources */,
+				5CCB9D211E09DD65009FD413 /* engine_data in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,8 +168,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5A21CD11A6547C1004AD95C /* MainController.cpp in Sources */,
-				A5A21CD01A6547C1004AD95C /* main.cpp in Sources */,
+				5CCB9D011E09D82D009FD413 /* MainController.cpp in Sources */,
+				5CCB9D001E09D82D009FD413 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,19 +216,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"\"$PROJECT_DIR/../../../include\"",
-				);
+				HEADER_SEARCH_PATHS = "\"$PROJECT_DIR/../../external/et/include\"";
+				LIBRARY_SEARCH_PATHS = "\"$PROJECT_DIR/../../external/et/lib/macos\"";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = (
-					"-lpng",
-					"-ljpeg",
-					"-ljansson",
-				);
+				OTHER_LDFLAGS = "-ljansson";
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -306,18 +260,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"\"$PROJECT_DIR/../../../include\"",
-				);
+				HEADER_SEARCH_PATHS = "\"$PROJECT_DIR/../../external/et/include\"";
+				LIBRARY_SEARCH_PATHS = "\"$PROJECT_DIR/../../external/et/lib/macos\"";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = (
-					"-lpng",
-					"-ljpeg",
-					"-ljansson",
-				);
+				OTHER_LDFLAGS = "-ljansson";
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -328,7 +275,6 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				LIBRARY_SEARCH_PATHS = "\"$PROJECT_DIR/../../../lib/osx\"";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cheetek.et.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -340,7 +286,6 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				LIBRARY_SEARCH_PATHS = "\"$PROJECT_DIR/../../../lib/osx\"";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cheetek.et.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -358,7 +303,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A5A21CC61A65477B004AD95C /* Build configuration list for PBXNativeTarget "get-started-osx" */ = {
+		A5A21CC61A65477B004AD95C /* Build configuration list for PBXNativeTarget "get-started" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A5A21CC71A65477B004AD95C /* Debug */,
