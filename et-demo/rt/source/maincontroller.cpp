@@ -9,45 +9,45 @@
 #include <et/imaging/texturedescription.h>
 #include "maincontroller.hpp"
 
-namespace demo
+namespace et
 {
 
-void MainController::setApplicationParameters(et::ApplicationParameters& p)
+void MainController::setApplicationParameters(ApplicationParameters& p)
 {
 #if (ET_PLATFORM_WIN)
-	p.renderingAPI = et::RenderingAPI::Vulkan;
+	p.renderingAPI = RenderingAPI::Vulkan;
 #elif (ET_PLATFORM_MAC)
-	p.renderingAPI = et::RenderingAPI::Metal;
+	p.renderingAPI = RenderingAPI::Metal;
 #endif
 
-	p.context.style |= et::ContextOptions::Style::Sizable;
+	p.context.style |= ContextOptions::Style::Sizable;
 	p.context.supportsHighResolution = true;
-	p.context.size = 4 * et::currentScreen().frame.size() / 5;
+	p.context.size = 4 * currentScreen().frame.size() / 5;
 }
 
-void MainController::setRenderContextParameters(et::RenderContextParameters& p)
+void MainController::setRenderContextParameters(RenderContextParameters& p)
 {
-	p.multisamplingQuality = et::MultisamplingQuality::None;
+	p.multisamplingQuality = MultisamplingQuality::None;
 }
 
-void MainController::applicationDidLoad(et::RenderContext* rc)
+void MainController::applicationDidLoad(RenderContext* rc)
 {
 	_rc = rc;
 	srand(static_cast<unsigned int>(time(nullptr)));
 
-	et::ObjectsCache localCache;
+	ObjectsCache localCache;
 
-	auto configName = et::application().resolveFileName("media/config/config.json");
-	et::VariantClass vc = et::VariantClass::Invalid;
-	_options = et::json::deserialize(et::loadTextFile(configName), vc);
-	ET_ASSERT(vc == et::VariantClass::Dictionary);
+	auto configName = application().resolveFileName("media/config/config.json");
+	VariantClass vc = VariantClass::Invalid;
+	_options = json::deserialize(loadTextFile(configName), vc);
+	ET_ASSERT(vc == VariantClass::Dictionary);
 
 	if (_options.hasKey("reference"))
 	{
-		vc = et::VariantClass::Invalid;
-		configName = et::application().resolveFileName("media/config/" + _options.stringForKey("reference")->content);
-		et::Dictionary reference = et::json::deserialize(et::loadTextFile(configName), vc);
-		ET_ASSERT(vc == et::VariantClass::Dictionary);
+		vc = VariantClass::Invalid;
+		configName = application().resolveFileName("media/config/" + _options.stringForKey("reference")->content);
+		Dictionary reference = json::deserialize(loadTextFile(configName), vc);
+		ET_ASSERT(vc == VariantClass::Dictionary);
 
 		for (auto& kv : reference->content)
 		{
@@ -55,24 +55,25 @@ void MainController::applicationDidLoad(et::RenderContext* rc)
 		}
 	}
 
-	auto modelName = et::application().resolveFileName(_options.stringForKey("model-name")->content);
+	auto modelName = application().resolveFileName(_options.stringForKey("model-name")->content);
 
-	et::VertexDeclaration decl(true, et::VertexAttributeUsage::Position, et::DataType::Vec3);
-	decl.push_back(et::VertexAttributeUsage::Normal, et::DataType::Vec3);
-	decl.push_back(et::VertexAttributeUsage::TexCoord0, et::DataType::Vec2);
+	VertexDeclaration decl(true, VertexAttributeUsage::Position, DataType::Vec3);
+	decl.push_back(VertexAttributeUsage::Normal, DataType::Vec3);
+	decl.push_back(VertexAttributeUsage::TexCoord0, DataType::Vec2);
 
-	if (!et::fileExists(modelName))
+	if (!fileExists(modelName))
 	{
 		ET_FAIL("Unable to load specified model");
 	}
 
-	_scene = et::s3d::Scene::Pointer::create();
+	_scene = s3d::Scene::Pointer::create();
+	_scene->setMainCamera(Camera::Pointer::create());
 
-	et::OBJLoader loader(modelName, et::OBJLoader::Option_CalculateTangents);
+	OBJLoader loader(modelName, OBJLoader::Option_CalculateTangents);
 	auto model = loader.load(rc->renderer(), _scene->storage(), localCache);
 	model->setParent(_scene.pointer());
 
-	et::Raytrace::Options rtOptions;
+	rt::Options rtOptions;
 	rtOptions.raysPerPixel = static_cast<uint32_t>(_options.integerForKey("rays-per-pixel", 32)->content);
 	rtOptions.maxKDTreeDepth = static_cast<uint32_t>(_options.integerForKey("kd-tree-max-depth", 4)->content);
 	rtOptions.maxPathLength = static_cast<uint32_t>(_options.integerForKey("max-path-length", 0ll)->content);
@@ -83,16 +84,12 @@ void MainController::applicationDidLoad(et::RenderContext* rc)
 	rtOptions.focalDistanceCorrection = _options.floatForKey("focal-distance-correction", 0.0f)->content;
 
 	if (_options.stringForKey("method")->content == "forward")
-	{
-		rtOptions.method = et::Raytrace::Method::LightTracing;
-	}
+		rtOptions.method = rt::RaytraceMethod::ForwardLightTracing;
 	else
-	{
-		rtOptions.method = et::Raytrace::Method::PathTracing;
-	}
+		rtOptions.method = rt::RaytraceMethod::BackwardPathTracing;
 	_rt.setOptions(rtOptions);
 
-	_rt.setOutputMethod([this](const et::vec2i& pixel, const et::vec4& color)
+	_rt.setOutputMethod([this](const vec2i& pixel, const vec4& color)
 	{
 		if ((pixel.x >= 0) && (pixel.y >= 0) && (pixel.x < _texture->size().x) && (pixel.y < _texture->size().y))
 		{
@@ -108,98 +105,103 @@ void MainController::applicationDidLoad(et::RenderContext* rc)
 	auto integrator = _options.stringForKey("integrator", "path-trace")->content;
 	if (integrator == "ao")
 	{
-		_rt.setIntegrator(et::rt::AmbientOcclusionIntegrator::Pointer::create());
+		_rt.setIntegrator(rt::AmbientOcclusionIntegrator::Pointer::create());
 	}
 	else if (integrator == "hack-ao")
 	{
-		_rt.setIntegrator(et::rt::AmbientOcclusionHackIntegrator::Pointer::create());
+		_rt.setIntegrator(rt::AmbientOcclusionHackIntegrator::Pointer::create());
 	}
 	else if (integrator == "normals")
 	{
-		_rt.setIntegrator(et::rt::NormalsIntegrator::Pointer::create());
+		_rt.setIntegrator(rt::NormalsIntegrator::Pointer::create());
 	}
 	else if (integrator == "fresnel")
 	{
-		_rt.setIntegrator(et::rt::FresnelIntegrator::Pointer::create());
+		_rt.setIntegrator(rt::FresnelIntegrator::Pointer::create());
 	}
 	else
 	{
-		_rt.setIntegrator(et::rt::PathTraceIntegrator::Pointer::create());
+		_rt.setIntegrator(rt::BackwardPathTracingIntegrator::Pointer::create());
 	}
 
-	et::rt::float4 envColor(et::arrayToVec4(_options.arrayForKey("env-color")));
+	rt::float4 envColor(arrayToVec4(_options.arrayForKey("env-color")));
 
-	auto envMap = _options.stringForKey("env-map")->content;
-	if (envMap.empty() == false)
-		envMap = et::application().resolveFileName(envMap);
-
-	if (et::fileExists(envMap))
+	std::string envMap = _options.stringForKey("env-map")->content;
+	if (!envMap.empty())
 	{
-		et::TextureDescription::Pointer texture = et::TextureDescription::Pointer::create(envMap);
-		_rt.setEnvironmentSampler(et::rt::EnvironmentEquirectangularMapSampler::Pointer::create(texture, envColor));
+		envMap = application().resolveFileName(envMap);
+	}
+
+	/* TODO : load environemnt map
+	if (fileExists(envMap))
+	{
+		TextureDescription::Pointer texture = TextureDescription::Pointer::create(envMap);
+		_rt.setEnvironmentSampler(rt::EnvironmentEquirectangularMapSampler::Pointer::create(texture, envColor));
 	}
 	else
 	{
 		auto envType = _options.stringForKey("env-type", "uniform")->content;
 		if (envType == "directional")
 		{
-			et::rt::float4 light(et::arrayToVec4(_options.arrayForKey("light-direction")));
-			_rt.setEnvironmentSampler(et::rt::DirectionalLightSampler::Pointer::create(light, envColor));
+			rt::float4 light(arrayToVec4(_options.arrayForKey("light-direction")));
+			_rt.setEnvironmentSampler(rt::DirectionalLightSampler::Pointer::create(light, envColor));
 		}
 		else
 		{
-			_rt.setEnvironmentSampler(et::rt::EnvironmentColorSampler::Pointer::create(envColor));
+			_rt.setEnvironmentSampler(rt::EnvironmentColorSampler::Pointer::create(envColor));
 		}
 	}
+	*/;
 
-	et::Input::instance().keyPressed.connect([this](size_t key)
+	Input::instance().keyPressed.connect([this](size_t key)
 	{
 		if (key == ET_KEY_SPACE)
 			start();
 	});
 
-	_gestures.click.connect([this](const et::PointerInputInfo& p)
+	_gestures.click.connect([this](const PointerInputInfo& p)
 	{
-		et::vec2i pixel(int(p.pos.x), int(p.pos.y));
-		et::vec4 color = _rt.performAtPoint(_scene, _camera, _texture->size(), pixel);
-		_rt.output(et::vec2i(pixel.x, _texture->size().y - pixel.y), color);
+		vec2i pixel(int(p.pos.x), int(p.pos.y));
+		vec4 color = _rt.performAtPoint(_scene, _texture->size(), pixel);
+		_rt.output(vec2i(pixel.x, pixel.y), color);
 	});
 
-	et::Input::instance().keyPressed.invokeInMainRunLoop(ET_KEY_SPACE);
+	Input::instance().keyPressed.invokeInMainRunLoop(ET_KEY_SPACE);
 }
 
 void MainController::start()
 {
 	_rt.stop();
 
-	et::vec2i textureSize = _rc->size();
+	vec2i textureSize = _rc->size();
 
 	_textureData.resize(textureSize.square());
 	_textureData.fill(0);
 
-	et::TextureDescription::Pointer desc = et::TextureDescription::Pointer::create();
-	desc->target = et::TextureTarget::Texture_2D;
-	desc->format = et::TextureFormat::RGBA32F;
+	TextureDescription::Pointer desc = TextureDescription::Pointer::create();
+	desc->target = TextureTarget::Texture_2D;
+	desc->format = TextureFormat::RGBA32F;
 	desc->size = textureSize;
-	desc->data = et::BinaryDataStorage(reinterpret_cast<unsigned char*>(_textureData.data()), _textureData.dataSize());
+	desc->data = BinaryDataStorage(reinterpret_cast<unsigned char*>(_textureData.data()), _textureData.dataSize());
 	_texture = _rc->renderer()->createTexture(desc);
 
-	et::RenderPass::ConstructionInfo passInfo;
+	RenderPass::ConstructionInfo passInfo;
 	passInfo.color[0].enabled = true;
 	_mainPass = _rc->renderer()->allocateRenderPass(passInfo);
-	_fullscreenQuad = et::renderhelper::createFullscreenRenderBatch(_texture);
+	_fullscreenQuad = renderhelper::createFullscreenRenderBatch(_texture);
 
-	const et::vec3 lookPoint = arrayToVec3(_options.arrayForKey("camera-view-point"));
-	const et::vec3 offset = arrayToVec3(_options.arrayForKey("camera-offset"));
+	const vec3 lookPoint = arrayToVec3(_options.arrayForKey("camera-view-point"));
+	const vec3 offset = arrayToVec3(_options.arrayForKey("camera-offset"));
 	float cameraFOV = _options.floatForKey("camera-fov", 60.0f)->content * TO_RADIANS;
 	float cameraPhi = _options.floatForKey("camera-phi", 0.0f)->content * TO_RADIANS;
 	float cameraTheta = _options.floatForKey("camera-theta", 0.0f)->content * TO_RADIANS;
 	float cameraDistance = _options.floatForKey("camera-distance", 3.0f)->content;
-	_camera.perspectiveProjection(cameraFOV, vector2ToFloat(textureSize).aspect(), 0.1f, 2048.0f);
-	_camera.lookAt(cameraDistance * et::fromSpherical(cameraTheta, cameraPhi) + offset, lookPoint);
-	et::log::info("Camera position: %f, %f, %f", _camera.position().x, _camera.position().y, _camera.position().z);
+	_scene->mainCamera()->perspectiveProjection(cameraFOV, vector2ToFloat(textureSize).aspect(), 0.1f, 2048.0f);
+	_scene->mainCamera()->lookAt(cameraDistance * fromSpherical(cameraTheta, cameraPhi) + offset, lookPoint);
+	log::info("Camera position: %f, %f, %f", 
+		_scene->mainCamera()->position().x, _scene->mainCamera()->position().y, _scene->mainCamera()->position().z);
 
-	_rt.perform(_scene, _camera, _texture->size());
+	_rt.perform(_scene, _texture->size());
 }
 
 void MainController::applicationWillTerminate()
@@ -207,11 +209,11 @@ void MainController::applicationWillTerminate()
 	_rt.stop();
 }
 
-void MainController::render(et::RenderContext* rc)
+void MainController::render(RenderContext* rc)
 {
 	if (_texture.valid())
 	{
-		_texture->setImageData(et::BinaryDataStorage(reinterpret_cast<uint8_t*>(_textureData.data()), _textureData.dataSize()));
+		_texture->setImageData(BinaryDataStorage(reinterpret_cast<uint8_t*>(_textureData.data()), _textureData.dataSize()));
 	}
 
 	_mainPass->begin();
@@ -221,15 +223,15 @@ void MainController::render(et::RenderContext* rc)
 	rc->renderer()->submitRenderPass(_mainPass);
 }
 
-et::ApplicationIdentifier demo::MainController::applicationIdentifier() const
+ApplicationIdentifier MainController::applicationIdentifier() const
 {
-	return et::ApplicationIdentifier(et::applicationIdentifierForCurrentProject(), "Cheetek", "RT demo");
+	return ApplicationIdentifier(applicationIdentifierForCurrentProject(), "Cheetek", "RT demo");
 }
 
-}
 
-et::IApplicationDelegate* et::Application::initApplicationDelegate()
+IApplicationDelegate* Application::initApplicationDelegate()
 {
-	return sharedObjectFactory().createObject<demo::MainController>();
+	return sharedObjectFactory().createObject<et::MainController>();
 }
 
+}

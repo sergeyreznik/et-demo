@@ -7,7 +7,7 @@
 #include <et/input/gestures.h>
 #include <et-ext/rt/raytrace.h>
 
-namespace demo
+namespace et
 {
 class MainController : public et::IApplicationDelegate
 {
@@ -25,11 +25,10 @@ private:
 	et::RenderContext* _rc = nullptr;
 	et::RenderPass::Pointer _mainPass;
 	et::RenderBatch::Pointer _fullscreenQuad;
-	et::Raytrace _rt;
 	et::Texture::Pointer _texture;
 	et::DataStorage<et::vec4> _textureData;
 	et::GesturesRecognizer _gestures;
-	et::Camera _camera;
 	et::s3d::Scene::Pointer _scene;
+	rt::Raytrace _rt;
 };
 }

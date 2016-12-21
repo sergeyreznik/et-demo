@@ -1,6 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="DebugWithOptimization|x64">
+      <Configuration>DebugWithOptimization</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
     <ProjectConfiguration Include="Debug|x64">
       <Configuration>Debug</Configuration>
       <Platform>x64</Platform>
@@ -23,6 +27,12 @@
     <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugWithOptimization|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
@@ -36,11 +46,21 @@
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugWithOptimization|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SolutionDir)..\external\et\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)..\external\et\lib\vs2015\;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)..\bin\</OutDir>
+    <IntDir>$(SolutionDir)..\intermediate\$(ProjectName)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugWithOptimization|x64'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>$(SolutionDir)..\external\et\include;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)..\external\et\lib\vs2015\;$(LibraryPath)</LibraryPath>
@@ -62,6 +82,29 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>et-$(Configuration).lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PreBuildEvent />
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugWithOptimization|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <SDLCheck>true</SDLCheck>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <MinimalRebuild>false</MinimalRebuild>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -80,6 +123,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -92,29 +136,49 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\..\external\et\include\et-ext\rt\bsdf.h" />
-    <ClInclude Include="..\..\external\et\include\et-ext\rt\environment.h" />
+    <ClInclude Include="..\..\external\et\include\et-ext\rt\emitter.h" />
+    <ClInclude Include="..\..\external\et\include\et-ext\rt\image.h" />
     <ClInclude Include="..\..\external\et\include\et-ext\rt\integrator.h" />
     <ClInclude Include="..\..\external\et\include\et-ext\rt\kdtree.h" />
     <ClInclude Include="..\..\external\et\include\et-ext\rt\raytrace.h" />
     <ClInclude Include="..\..\external\et\include\et-ext\rt\raytraceobjects.h" />
     <ClInclude Include="..\..\external\et\include\et-ext\rt\reconstruction.h" />
+    <ClInclude Include="..\..\external\et\include\et-ext\rt\rtscene.h" />
     <ClInclude Include="..\..\external\et\include\et-ext\rt\sampler.h" />
-    <ClInclude Include="..\..\include\et-ext\rt\reconstruction.cpp" />
-    <ClInclude Include="..\..\include\et-ext\rt\sampler.cpp" />
     <ClInclude Include="..\..\external\et\include\et-ext\rt\bsdf.cpp" />
-    <ClInclude Include="..\..\external\et\include\et-ext\rt\environment.cpp" />
+    <ClInclude Include="..\..\external\et\include\et-ext\rt\emitter.cpp" />
     <ClInclude Include="..\..\external\et\include\et-ext\rt\integrator.cpp" />
     <ClInclude Include="..\..\external\et\include\et-ext\rt\kdtree.cpp" />
     <ClInclude Include="..\..\external\et\include\et-ext\rt\raytrace.cpp" />
     <ClInclude Include="..\..\external\et\include\et-ext\rt\raytraceobjects.cpp" />
     <ClInclude Include="..\..\external\et\include\et-ext\rt\reconstruction.cpp" />
+    <ClInclude Include="..\..\external\et\include\et-ext\rt\image.cpp" />
     <ClCompile Include="..\..\external\et\include\et-ext\rt\rt.pack.cxx" />
     <ClInclude Include="..\..\external\et\include\et-ext\rt\sampler.cpp" />
+    <ClInclude Include="..\..\external\et\include\et-ext\rt\rtscene.cpp" />
     <ClCompile Include="source\main.cpp" />
     <ClCompile Include="source\maincontroller.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\maincontroller.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\bin\media\config\bunny.json" />
+    <None Include="..\..\bin\media\config\config.json" />
+    <None Include="..\..\bin\media\config\cornellbox-sphere.json" />
+    <None Include="..\..\bin\media\config\cornellbox-water.json" />
+    <None Include="..\..\bin\media\config\cornellbox.json" />
+    <None Include="..\..\bin\media\config\cube.json" />
+    <None Include="..\..\bin\media\config\dragon.json" />
+    <None Include="..\..\bin\media\config\dragon_stand.json" />
+    <None Include="..\..\bin\media\config\glass_for_wine.json" />
+    <None Include="..\..\bin\media\config\importance-sampling.json" />
+    <None Include="..\..\bin\media\config\material-test-grid.json" />
+    <None Include="..\..\bin\media\config\material-test.json" />
+    <None Include="..\..\bin\media\config\mitsuba.json" />
+    <None Include="..\..\bin\media\config\shaderart.json" />
+    <None Include="..\..\bin\media\config\sponza.json" />
+    <None Include="..\..\bin\media\config\teapots.json" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

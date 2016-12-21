@@ -11,6 +11,12 @@
     <Filter Include="et-ext\rt">
       <UniqueIdentifier>{d068bb12-2e55-4949-a560-f5a00bd9e93a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="media">
+      <UniqueIdentifier>{0542f626-3248-4799-ba74-aaeba2c9cc08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="media\config">
+      <UniqueIdentifier>{8f2efe15-d1a7-46fa-903f-ed060ca5e7df}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\main.cpp">
@@ -28,9 +34,6 @@
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\external\et\include\et-ext\rt\bsdf.h">
-      <Filter>et-ext\rt</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\external\et\include\et-ext\rt\environment.h">
       <Filter>et-ext\rt</Filter>
     </ClInclude>
     <ClInclude Include="..\..\external\et\include\et-ext\rt\integrator.h">
@@ -54,9 +57,6 @@
     <ClInclude Include="..\..\external\et\include\et-ext\rt\bsdf.cpp">
       <Filter>et-ext\rt</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\external\et\include\et-ext\rt\environment.cpp">
-      <Filter>et-ext\rt</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\external\et\include\et-ext\rt\integrator.cpp">
       <Filter>et-ext\rt</Filter>
     </ClInclude>
@@ -72,14 +72,76 @@
     <ClInclude Include="..\..\external\et\include\et-ext\rt\reconstruction.cpp">
       <Filter>et-ext\rt</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\et-ext\rt\reconstruction.cpp">
-      <Filter>et-ext\rt</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\external\et\include\et-ext\rt\sampler.cpp">
       <Filter>et-ext\rt</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\et-ext\rt\sampler.cpp">
+    <ClInclude Include="..\..\external\et\include\et-ext\rt\image.h">
       <Filter>et-ext\rt</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\external\et\include\et-ext\rt\image.cpp">
+      <Filter>et-ext\rt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\et\include\et-ext\rt\emitter.h">
+      <Filter>et-ext\rt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\et\include\et-ext\rt\emitter.cpp">
+      <Filter>et-ext\rt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\et\include\et-ext\rt\rtscene.h">
+      <Filter>et-ext\rt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\et\include\et-ext\rt\rtscene.cpp">
+      <Filter>et-ext\rt</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\bin\media\config\config.json">
+      <Filter>media\config</Filter>
+    </None>
+    <None Include="..\..\bin\media\config\cornellbox.json">
+      <Filter>media\config</Filter>
+    </None>
+    <None Include="..\..\bin\media\config\cornellbox-sphere.json">
+      <Filter>media\config</Filter>
+    </None>
+    <None Include="..\..\bin\media\config\cornellbox-water.json">
+      <Filter>media\config</Filter>
+    </None>
+    <None Include="..\..\bin\media\config\cube.json">
+      <Filter>media\config</Filter>
+    </None>
+    <None Include="..\..\bin\media\config\dragon.json">
+      <Filter>media\config</Filter>
+    </None>
+    <None Include="..\..\bin\media\config\dragon_stand.json">
+      <Filter>media\config</Filter>
+    </None>
+    <None Include="..\..\bin\media\config\glass_for_wine.json">
+      <Filter>media\config</Filter>
+    </None>
+    <None Include="..\..\bin\media\config\importance-sampling.json">
+      <Filter>media\config</Filter>
+    </None>
+    <None Include="..\..\bin\media\config\material-test.json">
+      <Filter>media\config</Filter>
+    </None>
+    <None Include="..\..\bin\media\config\material-test-grid.json">
+      <Filter>media\config</Filter>
+    </None>
+    <None Include="..\..\bin\media\config\mitsuba.json">
+      <Filter>media\config</Filter>
+    </None>
+    <None Include="..\..\bin\media\config\shaderart.json">
+      <Filter>media\config</Filter>
+    </None>
+    <None Include="..\..\bin\media\config\sponza.json">
+      <Filter>media\config</Filter>
+    </None>
+    <None Include="..\..\bin\media\config\teapots.json">
+      <Filter>media\config</Filter>
+    </None>
+    <None Include="..\..\bin\media\config\bunny.json">
+      <Filter>media\config</Filter>
+    </None>
   </ItemGroup>
 </Project>
