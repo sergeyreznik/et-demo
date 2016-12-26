@@ -79,6 +79,7 @@ void MainController::applicationDidLoad(RenderContext* rc)
 	rtOptions.maxPathLength = static_cast<uint32_t>(_options.integerForKey("max-path-length", 0ll)->content);
 	rtOptions.renderRegionSize = static_cast<uint32_t>(_options.integerForKey("render-region-size", 32)->content);
 	rtOptions.threads = static_cast<uint32_t>(_options.integerForKey("threads", 0ll)->content);
+	rtOptions.lightSamples = static_cast<uint32_t>(_options.integerForKey("light-samples", 1)->content);
 	rtOptions.renderKDTree = _options.integerForKey("render-kd-tree", 0ll)->content != 0;
 	rtOptions.apertureSize = _options.floatForKey("aperture-size", 0.0f)->content;
 	rtOptions.focalDistanceCorrection = _options.floatForKey("focal-distance-correction", 0.0f)->content;
@@ -95,10 +96,6 @@ void MainController::applicationDidLoad(RenderContext* rc)
 		{
 			int pos = pixel.x + pixel.y * _texture->size().x;
 			_textureData[pos] = mix(_textureData[pos], color, color.w);
-			ET_ASSERT(!isnan(_textureData[pos].x));
-			ET_ASSERT(!isnan(_textureData[pos].y));
-			ET_ASSERT(!isnan(_textureData[pos].z));
-			ET_ASSERT(!isnan(_textureData[pos].w));
 		}
 	});
 

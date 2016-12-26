@@ -1,10 +1,11 @@
 {
-	"reference" : "material-test-grid.json",
-	"rays-per-pixel" : 256,
+	"reference" : "cornellbox-sphere.json",
+	"rays-per-pixel" : 8,
 	"method" : "backward",
 	"sampler" : "stratified",
 	"reconstruction" : "triangle",
 	"render-region-size" : 32,
 	"threads" : 0,
-	"max-path-length" : 0
+	"max-path-length" : 0,
+	"light-samples" : 1
 }

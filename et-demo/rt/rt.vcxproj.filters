@@ -17,6 +17,9 @@
     <Filter Include="media\config">
       <UniqueIdentifier>{8f2efe15-d1a7-46fa-903f-ed060ca5e7df}</UniqueIdentifier>
     </Filter>
+    <Filter Include="media\models">
+      <UniqueIdentifier>{68f0b7eb-743c-4c9b-9e5d-893b4be45748}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\main.cpp">
@@ -143,5 +146,94 @@
     <None Include="..\..\bin\media\config\bunny.json">
       <Filter>media\config</Filter>
     </None>
+    <None Include="..\..\bin\media\models\bunny.mtl">
+      <Filter>media\models</Filter>
+    </None>
+    <None Include="..\..\bin\media\models\cornellbox.mtl">
+      <Filter>media\models</Filter>
+    </None>
+    <None Include="..\..\bin\media\models\CornellBox-Sphere.mtl">
+      <Filter>media\models</Filter>
+    </None>
+    <None Include="..\..\bin\media\models\CornellBox-Water.mtl">
+      <Filter>media\models</Filter>
+    </None>
+    <None Include="..\..\bin\media\models\cube.mtl">
+      <Filter>media\models</Filter>
+    </None>
+    <None Include="..\..\bin\media\models\dragon.mtl">
+      <Filter>media\models</Filter>
+    </None>
+    <None Include="..\..\bin\media\models\dragon_stand.mtl">
+      <Filter>media\models</Filter>
+    </None>
+    <None Include="..\..\bin\media\models\glass_for_wine.mtl">
+      <Filter>media\models</Filter>
+    </None>
+    <None Include="..\..\bin\media\models\importance-sampling.mtl">
+      <Filter>media\models</Filter>
+    </None>
+    <None Include="..\..\bin\media\models\material-test.mtl">
+      <Filter>media\models</Filter>
+    </None>
+    <None Include="..\..\bin\media\models\material-test-grid.mtl">
+      <Filter>media\models</Filter>
+    </None>
+    <None Include="..\..\bin\media\models\mitsuba.mtl">
+      <Filter>media\models</Filter>
+    </None>
+    <None Include="..\..\bin\media\models\shaderart.mtl">
+      <Filter>media\models</Filter>
+    </None>
+    <None Include="..\..\bin\media\models\teapots.mtl">
+      <Filter>media\models</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="..\..\bin\media\models\bunny.obj">
+      <Filter>media\models</Filter>
+    </Object>
+    <Object Include="..\..\bin\media\models\cornellbox.obj">
+      <Filter>media\models</Filter>
+    </Object>
+    <Object Include="..\..\bin\media\models\CornellBox-Sphere.obj">
+      <Filter>media\models</Filter>
+    </Object>
+    <Object Include="..\..\bin\media\models\CornellBox-Water.obj">
+      <Filter>media\models</Filter>
+    </Object>
+    <Object Include="..\..\bin\media\models\cube.obj">
+      <Filter>media\models</Filter>
+    </Object>
+    <Object Include="..\..\bin\media\models\dragon.obj">
+      <Filter>media\models</Filter>
+    </Object>
+    <Object Include="..\..\bin\media\models\dragon_stand.obj">
+      <Filter>media\models</Filter>
+    </Object>
+    <Object Include="..\..\bin\media\models\glass_for_wine.obj">
+      <Filter>media\models</Filter>
+    </Object>
+    <Object Include="..\..\bin\media\models\importance-sampling.obj">
+      <Filter>media\models</Filter>
+    </Object>
+    <Object Include="..\..\bin\media\models\material-test.obj">
+      <Filter>media\models</Filter>
+    </Object>
+    <Object Include="..\..\bin\media\models\material-test-grid.obj">
+      <Filter>media\models</Filter>
+    </Object>
+    <Object Include="..\..\bin\media\models\mitsuba.obj">
+      <Filter>media\models</Filter>
+    </Object>
+    <Object Include="..\..\bin\media\models\mitsuba-sphere.obj">
+      <Filter>media\models</Filter>
+    </Object>
+    <Object Include="..\..\bin\media\models\shaderart.obj">
+      <Filter>media\models</Filter>
+    </Object>
+    <Object Include="..\..\bin\media\models\teapots.obj">
+      <Filter>media\models</Filter>
+    </Object>
   </ItemGroup>
 </Project>

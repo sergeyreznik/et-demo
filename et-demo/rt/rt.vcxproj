@@ -179,6 +179,67 @@
     <None Include="..\..\bin\media\config\shaderart.json" />
     <None Include="..\..\bin\media\config\sponza.json" />
     <None Include="..\..\bin\media\config\teapots.json" />
+    <None Include="..\..\bin\media\models\bunny.mtl" />
+    <None Include="..\..\bin\media\models\CornellBox-Sphere.mtl" />
+    <None Include="..\..\bin\media\models\CornellBox-Water.mtl" />
+    <None Include="..\..\bin\media\models\cornellbox.mtl" />
+    <None Include="..\..\bin\media\models\cube.mtl" />
+    <None Include="..\..\bin\media\models\dragon.mtl" />
+    <None Include="..\..\bin\media\models\dragon_stand.mtl" />
+    <None Include="..\..\bin\media\models\glass_for_wine.mtl" />
+    <None Include="..\..\bin\media\models\importance-sampling.mtl" />
+    <None Include="..\..\bin\media\models\material-test-grid.mtl" />
+    <None Include="..\..\bin\media\models\material-test.mtl" />
+    <None Include="..\..\bin\media\models\mitsuba.mtl" />
+    <None Include="..\..\bin\media\models\shaderart.mtl" />
+    <None Include="..\..\bin\media\models\teapots.mtl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\bin\media\models\bunny.obj">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="..\..\bin\media\models\CornellBox-Sphere.obj">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="..\..\bin\media\models\CornellBox-Water.obj">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="..\..\bin\media\models\cornellbox.obj">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="..\..\bin\media\models\cube.obj">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="..\..\bin\media\models\dragon.obj">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="..\..\bin\media\models\dragon_stand.obj">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="..\..\bin\media\models\glass_for_wine.obj">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="..\..\bin\media\models\importance-sampling.obj">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="..\..\bin\media\models\material-test-grid.obj">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="..\..\bin\media\models\material-test.obj">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="..\..\bin\media\models\mitsuba-sphere.obj">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="..\..\bin\media\models\mitsuba.obj">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="..\..\bin\media\models\shaderart.obj">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="..\..\bin\media\models\teapots.obj">
+      <FileType>Document</FileType>
+    </None>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -11,7 +11,8 @@
 # http://www.cs.cmu.edu/~djames/15-864/pics/cornellBox.jpg
 #
 newmtl leftSphere
-	Pr 0.001
+	Pr 0.01
+	Pm 1.0
 	Ni 0.46
     Ka 0.01 0.01 0.01
 	Kd 0.95 0.95 0.95
@@ -19,6 +20,7 @@ newmtl leftSphere
 
 newmtl rightSphere
 	Pr 0.001
+	Pm 0.15
 	Ni 1.42
     Ka 0.01 0.01 0.01
 	Kd 1.00 1.00 1.00
