@@ -188,52 +188,50 @@
     <None Include="..\..\bin\media\models\teapots.mtl">
       <Filter>media\models</Filter>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Object Include="..\..\bin\media\models\bunny.obj">
+    <None Include="..\..\bin\media\models\bunny.obj">
       <Filter>media\models</Filter>
-    </Object>
-    <Object Include="..\..\bin\media\models\cornellbox.obj">
+    </None>
+    <None Include="..\..\bin\media\models\cornellbox.obj">
       <Filter>media\models</Filter>
-    </Object>
-    <Object Include="..\..\bin\media\models\CornellBox-Sphere.obj">
+    </None>
+    <None Include="..\..\bin\media\models\CornellBox-Sphere.obj">
       <Filter>media\models</Filter>
-    </Object>
-    <Object Include="..\..\bin\media\models\CornellBox-Water.obj">
+    </None>
+    <None Include="..\..\bin\media\models\CornellBox-Water.obj">
       <Filter>media\models</Filter>
-    </Object>
-    <Object Include="..\..\bin\media\models\cube.obj">
+    </None>
+    <None Include="..\..\bin\media\models\cube.obj">
       <Filter>media\models</Filter>
-    </Object>
-    <Object Include="..\..\bin\media\models\dragon.obj">
+    </None>
+    <None Include="..\..\bin\media\models\dragon.obj">
       <Filter>media\models</Filter>
-    </Object>
-    <Object Include="..\..\bin\media\models\dragon_stand.obj">
+    </None>
+    <None Include="..\..\bin\media\models\dragon_stand.obj">
       <Filter>media\models</Filter>
-    </Object>
-    <Object Include="..\..\bin\media\models\glass_for_wine.obj">
+    </None>
+    <None Include="..\..\bin\media\models\glass_for_wine.obj">
       <Filter>media\models</Filter>
-    </Object>
-    <Object Include="..\..\bin\media\models\importance-sampling.obj">
+    </None>
+    <None Include="..\..\bin\media\models\importance-sampling.obj">
       <Filter>media\models</Filter>
-    </Object>
-    <Object Include="..\..\bin\media\models\material-test.obj">
+    </None>
+    <None Include="..\..\bin\media\models\material-test.obj">
       <Filter>media\models</Filter>
-    </Object>
-    <Object Include="..\..\bin\media\models\material-test-grid.obj">
+    </None>
+    <None Include="..\..\bin\media\models\material-test-grid.obj">
       <Filter>media\models</Filter>
-    </Object>
-    <Object Include="..\..\bin\media\models\mitsuba.obj">
+    </None>
+    <None Include="..\..\bin\media\models\mitsuba.obj">
       <Filter>media\models</Filter>
-    </Object>
-    <Object Include="..\..\bin\media\models\mitsuba-sphere.obj">
+    </None>
+    <None Include="..\..\bin\media\models\mitsuba-sphere.obj">
       <Filter>media\models</Filter>
-    </Object>
-    <Object Include="..\..\bin\media\models\shaderart.obj">
+    </None>
+    <None Include="..\..\bin\media\models\shaderart.obj">
       <Filter>media\models</Filter>
-    </Object>
-    <Object Include="..\..\bin\media\models\teapots.obj">
+    </None>
+    <None Include="..\..\bin\media\models\teapots.obj">
       <Filter>media\models</Filter>
-    </Object>
+    </None>
   </ItemGroup>
 </Project>

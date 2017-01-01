@@ -7,25 +7,18 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "et-static-win", "..\externa
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "get-started", "get-started\get-started.vcxproj", "{B436FBDC-FC56-465C-94AF-B79209C07329}"
 	ProjectSection(ProjectDependencies) = postProject
-		{48C8E462-4679-4403-AF75-E88B8E55E930} = {48C8E462-4679-4403-AF75-E88B8E55E930}
 		{C16E6F9D-51E8-4DC3-BEA8-3822B46E3EDF} = {C16E6F9D-51E8-4DC3-BEA8-3822B46E3EDF}
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "rt", "rt\rt.vcxproj", "{03420216-46BB-4724-9F80-CB5C7F316517}"
 	ProjectSection(ProjectDependencies) = postProject
-		{48C8E462-4679-4403-AF75-E88B8E55E930} = {48C8E462-4679-4403-AF75-E88B8E55E930}
 		{C16E6F9D-51E8-4DC3-BEA8-3822B46E3EDF} = {C16E6F9D-51E8-4DC3-BEA8-3822B46E3EDF}
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "scene-rendering", "scene-rendering\windows.vcxproj", "{EB1EACDF-7581-44C4-945B-4B9A969C69BF}"
 	ProjectSection(ProjectDependencies) = postProject
-		{48C8E462-4679-4403-AF75-E88B8E55E930} = {48C8E462-4679-4403-AF75-E88B8E55E930}
 		{C16E6F9D-51E8-4DC3-BEA8-3822B46E3EDF} = {C16E6F9D-51E8-4DC3-BEA8-3822B46E3EDF}
 	EndProjectSection
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "copy-et-resources", "..\service\copy-et-resources\copy-et-resources.vcxproj", "{48C8E462-4679-4403-AF75-E88B8E55E930}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{DC1DAC74-E7A7-4A75-B6AD-EC31803AB06B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -58,17 +51,8 @@ Global
 		{EB1EACDF-7581-44C4-945B-4B9A969C69BF}.DebugWithOptimization|x64.Build.0 = DebugWithOptimization|x64
 		{EB1EACDF-7581-44C4-945B-4B9A969C69BF}.Release|x64.ActiveCfg = Release|x64
 		{EB1EACDF-7581-44C4-945B-4B9A969C69BF}.Release|x64.Build.0 = Release|x64
-		{48C8E462-4679-4403-AF75-E88B8E55E930}.Debug|x64.ActiveCfg = Debug|x64
-		{48C8E462-4679-4403-AF75-E88B8E55E930}.Debug|x64.Build.0 = Debug|x64
-		{48C8E462-4679-4403-AF75-E88B8E55E930}.DebugWithOptimization|x64.ActiveCfg = DebugWithOptimization|x64
-		{48C8E462-4679-4403-AF75-E88B8E55E930}.DebugWithOptimization|x64.Build.0 = DebugWithOptimization|x64
-		{48C8E462-4679-4403-AF75-E88B8E55E930}.Release|x64.ActiveCfg = Release|x64
-		{48C8E462-4679-4403-AF75-E88B8E55E930}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{48C8E462-4679-4403-AF75-E88B8E55E930} = {DC1DAC74-E7A7-4A75-B6AD-EC31803AB06B}
 	EndGlobalSection
 EndGlobal

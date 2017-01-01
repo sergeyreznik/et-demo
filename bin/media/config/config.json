@@ -1,11 +1,12 @@
 {
-	"reference" : "cornellbox-sphere.json",
-	"rays-per-pixel" : 8,
+	"reference" : "importance-sampling.json",
+	"rays-per-pixel" : 2,
 	"method" : "backward",
 	"sampler" : "stratified",
 	"reconstruction" : "triangle",
 	"render-region-size" : 32,
 	"threads" : 0,
-	"max-path-length" : 0,
-	"light-samples" : 1
+	"max-path-length" : 1,
+	"light-samples" : 1,
+	"bsdf-samples" : 1
 }
