@@ -5,36 +5,31 @@ newmtl 01___Default
 	Ni 0.0
 	Pm 0.0
 	Pr 1.0
-	Kd 0.5 0.5 0.5
-	Ks 0.0 0.0 0.0
+	Kd 1.0 1.0 1.0
 
 newmtl 09___Default
 	Ni 0.0
 	Pm 1.0
 	Pr 0.8
-	Kd 0.0 0.0 0.0
-	Ks 1.0 1.0 1.0
+	Kd 1.0 1.0 1.0
 
 newmtl 08___Default
 	Ni 0.0
 	Pm 1.0
 	Pr 0.6
-	Kd 0.0 0.0 0.0
-	Ks 1.0 1.0 1.0
+	Kd 1.0 1.0 1.0
 
 newmtl 03___Default
 	Ni 0.0
 	Pm 1.0
 	Pr 0.4
-	Kd 0.0 0.0 0.0
-	Ks 1.0 1.0 1.0
+	Kd 1.0 1.0 1.0
 
 newmtl 02___Default
 	Ni 0.0
 	Pm 1.0
 	Pr 0.0
-	Kd 0.0 0.0 0.0
-	Ks 1.0 1.0 1.0
+	Kd 1.0 1.0 1.0
 
 newmtl 07___Default
 	Ni 0.0

@@ -1,5 +1,5 @@
 {
-	"reference" : "importance-sampling.json",
+	"reference" : "material-test-grid.json",
 	"rays-per-pixel" : 2,
 	"method" : "backward",
 	"sampler" : "stratified",
